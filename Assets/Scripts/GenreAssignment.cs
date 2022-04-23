@@ -55,6 +55,8 @@ public class GenreAssignment : MonoBehaviour
     
     private NavMeshAgent agent;
 
+    private bool checkAmount;
+    private bool doubleCheck;
 
     public static int secondRock, secondPop, secondCountry, secondMetal;
     public static int thirdRock, thirdPop, thirdCountry, thirdMetal;
@@ -64,16 +66,16 @@ public class GenreAssignment : MonoBehaviour
         anim = GetComponent<Animator>();
         playerStartPos = this.transform.position;
         AssignGenres();
+        //ReassignGenres();
         AssignEnviroment();
         AssignMaterial();
-        CheckTotal();
         agent = GetComponent<NavMeshAgent>();
-
 
         rockArea = GameObject.FindGameObjectWithTag("Rock");
         popArea = GameObject.FindGameObjectWithTag("Pop");
         countryArea = GameObject.FindGameObjectWithTag("Country");
         metalArea = GameObject.FindGameObjectWithTag("Metal");
+        checkAmount = true;
     }
 
     // Update is called once per frame
@@ -85,6 +87,8 @@ public class GenreAssignment : MonoBehaviour
         AssignPlayer();
         //UpdatePlayer();
         UpdateAnimations();
+
+        
 
         if (Input.GetKeyDown(KeyCode.F))
         {
@@ -126,6 +130,7 @@ public class GenreAssignment : MonoBehaviour
         {
             loop = true;
             eventOne = true;
+            CheckTotal();
             if(loopOne)
             {
                 ChangeTotal();
@@ -198,9 +203,8 @@ public class GenreAssignment : MonoBehaviour
                 yield return new WaitForSeconds(20);
                 startMetal = false;
             }
-
-            eventOne = false;
             eventTwo = true;
+            eventOne = false;
         }
 
         if (eventTwo)
@@ -240,9 +244,8 @@ public class GenreAssignment : MonoBehaviour
                 yield return new WaitForSeconds(20);
                 startMetal = false;
             }
-
-            eventTwo = false;
             eventThree = true;
+            eventTwo = false;
         }
 
         if (eventThree)
@@ -284,9 +287,8 @@ public class GenreAssignment : MonoBehaviour
                 startMetal = false;
             }
 
-
-            eventThree = false;
             eventFour = true;
+            eventThree = false;
         }
 
         if (eventFour)

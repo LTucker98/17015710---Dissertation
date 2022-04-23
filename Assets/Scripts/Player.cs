@@ -26,10 +26,29 @@ public class Player : MonoBehaviour
 
     public bool eventOne, eventTwo, eventThree, eventFour;
 
-    private static int rockTotal, popTotal, countryTotal, metalTotal;
-    private static int secondRock, secondPop, secondCountry, secondMetal;
-    private static int thirdRock, thirdPop, thirdCountry, thirdMetal;
-    private static int fourthRock, fourthPop, fourthCountry, fourthMetal;
+    [Header("First Genre")]
+    public int rockTotal;
+    public int popTotal;
+    public int countryTotal;
+    public int metalTotal;
+
+    [Header("Second Genre")]
+    public int secondRock;
+    public int secondPop;
+    public int secondCountry;
+    public int secondMetal;
+
+    [Header("Third Genre")]
+    public int thirdRock;
+    public int thirdPop;
+    public int thirdCountry;
+    public int thirdMetal;
+
+    [Header("Fourth Genre")]
+    public int fourthRock;
+    public int fourthPop;
+    public int fourthCountry;
+    public int fourthMetal;
 
     [SerializeField] public TextMeshProUGUI[] genreTotal;
     [SerializeField] public TextMeshProUGUI[] currentTotal;
