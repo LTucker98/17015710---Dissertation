@@ -55,8 +55,7 @@ public class GenreAssignment : MonoBehaviour
     
     private NavMeshAgent agent;
 
-    private bool checkAmount;
-    private bool doubleCheck;
+    private bool checkOnce;
 
     public static int secondRock, secondPop, secondCountry, secondMetal;
     public static int thirdRock, thirdPop, thirdCountry, thirdMetal;
@@ -71,11 +70,11 @@ public class GenreAssignment : MonoBehaviour
         AssignMaterial();
         agent = GetComponent<NavMeshAgent>();
 
+        checkOnce = true;
         rockArea = GameObject.FindGameObjectWithTag("Rock");
         popArea = GameObject.FindGameObjectWithTag("Pop");
         countryArea = GameObject.FindGameObjectWithTag("Country");
         metalArea = GameObject.FindGameObjectWithTag("Metal");
-        checkAmount = true;
     }
 
     // Update is called once per frame
@@ -130,15 +129,22 @@ public class GenreAssignment : MonoBehaviour
         {
             loop = true;
             eventOne = true;
-            CheckTotal();
+            
             if(loopOne)
             {
                 ChangeTotal();
                 AssignGenres();
                 ReassignGenres();
-                CheckTotal();
+                
                 AssignMaterial();
+                StartCoroutine(CheckValues());
             }
+            
+        }
+        if (checkOnce)
+        {
+            StartCoroutine(CheckValues());
+            checkOnce = false;
         }
         if (loop)
         {
@@ -162,7 +168,11 @@ public class GenreAssignment : MonoBehaviour
             UpdateMetalReaction();
         }
     }
-
+    IEnumerator CheckValues()
+    {
+        yield return new WaitForSeconds(1f);
+        CheckTotal();
+    }
     IEnumerator MoveToGenre()
     {
         if (eventOne)
@@ -337,6 +347,7 @@ public class GenreAssignment : MonoBehaviour
                 agent.destination = playerStartPos;
                 loop = false;
                 loopOne = true;
+                checkOnce = false;
             }
         }
     }
