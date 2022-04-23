@@ -50,7 +50,6 @@ public class GenreAssignment : MonoBehaviour
     
     public Animator anim;
     public int enjoyAnim;
-    public bool walking;   // WALKING CONFLICTS WITH OTHER ANIMATIONS
 
     public Vector3 playerStartPos;  // SET AI POSITION BACK TO ORIGINAL?
     
@@ -165,10 +164,8 @@ public class GenreAssignment : MonoBehaviour
         {
             if (firstGenre == 1)
             {
-                //walking = true;
                 agent.destination = rockArea.transform.position;
                 yield return new WaitForSeconds(10);
-                //walking = false;
                 enjoyRockLevel = Player.playerRockGameplay;
                 startRock = true;
                 yield return new WaitForSeconds(20);
@@ -176,10 +173,8 @@ public class GenreAssignment : MonoBehaviour
             }
             else if (firstGenre == 2)
             {
-                //walking = true;
                 agent.destination = popArea.transform.position;
                 yield return new WaitForSeconds(10);
-                //walking = false;
                 enjoyPopLevel = Player.playerPopGameplay;
                 startPop = true;
                 yield return new WaitForSeconds(20);
@@ -187,10 +182,8 @@ public class GenreAssignment : MonoBehaviour
             }
             else if (firstGenre == 3)
             {
-                //walking = true;
                 agent.destination = countryArea.transform.position;
                 yield return new WaitForSeconds(10);
-                //walking = false;
                 enjoyCountryLevel = Player.playerCountryGameplay;
                 startCountry = true;
                 yield return new WaitForSeconds(20);
@@ -198,10 +191,8 @@ public class GenreAssignment : MonoBehaviour
             }
             else if (firstGenre == 4)
             {
-                //walking = true;
                 agent.destination = metalArea.transform.position;
                 yield return new WaitForSeconds(10);
-                //walking = false;
                 enjoyMetalLevel = Player.playerMetalGameplay;
                 startMetal = true;
                 yield return new WaitForSeconds(20);
@@ -216,21 +207,16 @@ public class GenreAssignment : MonoBehaviour
         {
             if (secondGenre == 1)
             {
-                //walking = true;
                 agent.destination = rockArea.transform.position;
                 yield return new WaitForSeconds(10);
-                //walking = false;
                 enjoyRockLevel = Player.playerRockGameplay;
-                startRock = true;
                 yield return new WaitForSeconds(20);
                 startRock = false;
             }
             else if (secondGenre == 2)
             {
-                //walking = true;
                 agent.destination = popArea.transform.position;
                 yield return new WaitForSeconds(10);
-                //walking = false;
                 enjoyPopLevel = Player.playerPopGameplay;
                 startPop = true;
                 yield return new WaitForSeconds(20);
@@ -238,10 +224,8 @@ public class GenreAssignment : MonoBehaviour
             }
             else if (secondGenre == 3)
             {
-                //walking = true;
                 agent.destination = countryArea.transform.position;
                 yield return new WaitForSeconds(10);
-                //walking = false;
                 enjoyCountryLevel = Player.playerCountryGameplay;
                 startCountry = true;
                 yield return new WaitForSeconds(20);
@@ -249,10 +233,8 @@ public class GenreAssignment : MonoBehaviour
             }
             else if (secondGenre == 4)
             {
-                //walking = true;
                 agent.destination = metalArea.transform.position;
                 yield return new WaitForSeconds(10);
-                //walking = false;
                 enjoyMetalLevel = Player.playerMetalGameplay;
                 startMetal = true;
                 yield return new WaitForSeconds(20);
@@ -267,10 +249,8 @@ public class GenreAssignment : MonoBehaviour
         {
             if (thirdGenre == 1)
             {
-                //walking = true;
                 agent.destination = rockArea.transform.position;
                 yield return new WaitForSeconds(10);
-                //walking = false;
                 enjoyRockLevel = Player.playerRockGameplay;
                 startRock = true;
                 yield return new WaitForSeconds(20);
@@ -278,10 +258,8 @@ public class GenreAssignment : MonoBehaviour
             }
             else if (thirdGenre == 2)
             {
-                //walking = true;
                 agent.destination = popArea.transform.position;
                 yield return new WaitForSeconds(10);
-                //walking = false;
                 enjoyPopLevel = Player.playerPopGameplay;
                 startPop = true;
                 yield return new WaitForSeconds(20);
@@ -289,10 +267,8 @@ public class GenreAssignment : MonoBehaviour
             }
             else if (thirdGenre == 3)
             {
-                //walking = true;
                 agent.destination = countryArea.transform.position;
                 yield return new WaitForSeconds(10);
-                //walking = false;
                 enjoyCountryLevel = Player.playerCountryGameplay;
                 startCountry = true;
                 yield return new WaitForSeconds(20);
@@ -300,10 +276,8 @@ public class GenreAssignment : MonoBehaviour
             }
             else if (thirdGenre == 4)
             {
-                //walking = true;
                 agent.destination = metalArea.transform.position;
                 yield return new WaitForSeconds(10);
-                //walking = false;
                 enjoyMetalLevel = Player.playerMetalGameplay;
                 startMetal = true;
                 yield return new WaitForSeconds(20);
@@ -319,10 +293,8 @@ public class GenreAssignment : MonoBehaviour
         {
             if (fourthGenre == 1)
             {
-                //walking = true;
                 agent.destination = rockArea.transform.position;
                 yield return new WaitForSeconds(10);
-                //walking = false;
                 enjoyRockLevel = Player.playerRockGameplay;
                 startRock = true;
                 yield return new WaitForSeconds(20);
@@ -330,10 +302,8 @@ public class GenreAssignment : MonoBehaviour
             }
             else if (fourthGenre == 2)
             {
-                //walking = true;
                 agent.destination = popArea.transform.position;
                 yield return new WaitForSeconds(10);
-                //walking = false;
                 enjoyPopLevel = Player.playerPopGameplay;
                 startPop = true;
                 yield return new WaitForSeconds(20);
@@ -341,10 +311,8 @@ public class GenreAssignment : MonoBehaviour
             }
             else if (fourthGenre == 3)
             {
-                //walking = true;
                 agent.destination = countryArea.transform.position;
                 yield return new WaitForSeconds(10);
-                //walking = false;
                 enjoyCountryLevel = Player.playerCountryGameplay;
                 startCountry = true;
                 yield return new WaitForSeconds(20);
@@ -352,10 +320,8 @@ public class GenreAssignment : MonoBehaviour
             }
             else if (fourthGenre == 4)
             {
-                //walking = true;
                 agent.destination = metalArea.transform.position;
                 yield return new WaitForSeconds(10);
-                //walking = false;
                 enjoyMetalLevel = Player.playerMetalGameplay;
                 startMetal = true;
                 yield return new WaitForSeconds(20);
@@ -824,7 +790,6 @@ public class GenreAssignment : MonoBehaviour
     private void UpdateAnimations()
     {
         anim.SetFloat("Enjoyment", indEnjoyLevel);
-        anim.SetBool("Walking", walking);
     }
 
     
