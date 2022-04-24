@@ -52,6 +52,7 @@ public class Player : MonoBehaviour
 
     [SerializeField] public TextMeshProUGUI[] genreTotal;
     [SerializeField] public TextMeshProUGUI[] currentTotal;
+    [SerializeField] public TextMeshProUGUI currentEvent;
     // Start is called before the first frame update
     void Start()
     {
@@ -121,6 +122,7 @@ public class Player : MonoBehaviour
             currentTotal[1].text = "Pop: " + popTotal;
             currentTotal[2].text = "Country: " + countryTotal;
             currentTotal[3].text = "Metal: " + metalTotal;
+            currentEvent.text = "Event: First Genre";
         }
         if (eventTwo)
         {
@@ -128,6 +130,7 @@ public class Player : MonoBehaviour
             currentTotal[1].text = "Pop: " + secondPop;
             currentTotal[2].text = "Country: " + secondCountry;
             currentTotal[3].text = "Metal: " + secondMetal;
+            currentEvent.text = "Event: Second Genre";
         }
         if (eventThree)
         {
@@ -135,6 +138,7 @@ public class Player : MonoBehaviour
             currentTotal[1].text = "Pop: " + thirdPop;
             currentTotal[2].text = "Country: " + thirdCountry;
             currentTotal[3].text = "Metal: " + thirdMetal;
+            currentEvent.text = "Event: Third Genre";
         }
         if (eventFour)
         {
@@ -142,6 +146,7 @@ public class Player : MonoBehaviour
             currentTotal[1].text = "Pop: " + fourthPop;
             currentTotal[2].text = "Country: " + fourthCountry;
             currentTotal[3].text = "Metal: " + fourthMetal;
+            currentEvent.text = "Event: Fourth Genre";
         }
         else if (!eventOne && !eventTwo && !eventThree && !eventFour)
         {
@@ -149,6 +154,7 @@ public class Player : MonoBehaviour
             currentTotal[1].text = "Pop: 0";
             currentTotal[2].text = "Country: 0";
             currentTotal[3].text = "Metal: 0";
+            currentEvent.text = "Event: None";
         }
     }
 

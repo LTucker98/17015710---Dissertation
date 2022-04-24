@@ -138,6 +138,7 @@ public class GenreAssignment : MonoBehaviour
                 
                 AssignMaterial();
                 StartCoroutine(CheckValues());
+                loopOne = false;
             }
             
         }
