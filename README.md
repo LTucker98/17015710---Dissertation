@@ -2,6 +2,8 @@
 
 Unity Version: Unity 2021.1.21f
 
+For use in editor, please make sure the game view is either set to 1080p or 4k as the UI is scaled to this aspect ratio. If not then the UI may show off screen.
+
 Key Inputs:
 
 Key - F
